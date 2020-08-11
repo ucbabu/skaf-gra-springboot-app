@@ -2,7 +2,7 @@
 FROM gradle:jdk14 as builder
 WORKDIR /app
 COPY ./ /app/
-RUN gradle clean build
+RUN ./gradlew clean build
 
 FROM openjdk:13-jdk-alpine
 EXPOSE 8080
